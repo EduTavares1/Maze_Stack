@@ -89,7 +89,7 @@ class Maze:
         else:
             return False
         
-    def is_free(self, pos : (int, int)) -> bool:
+    def is_free(self, pos: tuple[int, int]) -> bool:
         '''
         Indica se a posição fornecida está livre para o jogador acessar, ou seja, 
         se for corredor ou prêmio.
@@ -113,7 +113,7 @@ class Maze:
             return False
         
         
-    def mov_player(self, pos : (int, int)) -> None:
+    def mov_player(self, pos: tuple[int, int]) -> None:
         '''
         Move o jogador para uma nova posição do labirinto desde que ela seja uma
         posição corredor na matriz M.
@@ -128,7 +128,7 @@ class Maze:
             self.M[pos[0], pos[1]] = Maze.PLAYER
         
 
-    def get_init_pos_player(self) -> tuple [int, int] -> None:
+    def get_init_pos_player(self) -> tuple[int, int]:
         '''
         Indica a posição inicial do jogador dentro do labirinto que foi gerada 
         de forma aleatória.
